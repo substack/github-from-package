@@ -10,8 +10,8 @@ module.exports = function (pkg) {
 };
 
 function match (str) {
-    var m = /github.com[:\/]([^\/"]+)\/([^\/"]+)/.exec(str);
+    var m = /\bgithub.com[:\/]([^\/"]+)\/([^\/"]+)/.exec(str);
     if (m) {
-        return m[1] + '/' + m[2].replace(/\.git$/, '');
+        return 'https://github.com/' + m[1] + '/' + m[2].replace(/\.git$/, '');
     }
 }
