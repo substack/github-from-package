@@ -1,12 +1,7 @@
 module.exports = function (pkg) {
-    var m;
-    if (m = match(JSON.stringify(pkg.repository))) {
-        return m;
-    }
-    else if (m = match(JSON.stringify(pkg))) {
-        return m;
-    }
-    return undefined;
+    return match(JSON.stringify(pkg.repository)) ||
+             match(JSON.stringify(pkg)) ||
+             undefined;
 };
 
 function match (str) {
