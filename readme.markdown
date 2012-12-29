@@ -2,6 +2,8 @@
 
 return the github url from a package.json file
 
+[![build status](https://secure.travis-ci.org/substack/github-from-package.png)](http://travis-ci.org/substack/github-from-package)
+
 # example
 
 For the `./package.json` file:
